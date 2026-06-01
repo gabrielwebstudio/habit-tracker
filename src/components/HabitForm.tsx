@@ -11,6 +11,7 @@ export default function HabitForm({ addHabit }: HabitFormProps) {
   function handleSubmit(e: SubmitEvent) {
     e.preventDefault();
     addHabit(name)
+    setName("");
   }
   return (
     <form className='flex gap-2' onSubmit={handleSubmit}>
