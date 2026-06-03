@@ -10,9 +10,10 @@ type HeaderProps = {
 
 export default function Header({visibleDates, onPrev, onNext}: HeaderProps) {
   const { habits } = useHabits();
-
+  console.log("habits:", habits);
   const doneToday = habits.filter(h => h.completions.some(c => isToday(c))).length;
   const dateRange = `${format(visibleDates[0], "MMM d")} - ${format(visibleDates.at(-1)!, "MMM d")}`
+
   return (
     <header className="flex items-center justify-between">
       <div className="flex flex-col gap-1">
