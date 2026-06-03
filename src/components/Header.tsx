@@ -1,4 +1,4 @@
-import { format, isFuture, isToday } from "date-fns";
+import { format, isToday } from "date-fns";
 import { useHabits } from "../context/HabitProvider"
 import Button from "./Button"
 
